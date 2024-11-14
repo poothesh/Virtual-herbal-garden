@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Herbal Website</title>
+    <link rel="stylesheet" href="css/item.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="logo/logo.png" width="120px" /></a>
+        </div>
+        <div class="search">
+          <div class="searchbar">
+            <input
+              id="search-input"
+              placeholder="Search by plant or medicine name..."
+            />
+            <button id="imagesearchbyn">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <button id="searchbtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      </div>
+      <div class="nav2">
+        <a href="ayurveda.html" class="nav-link">Ayurveda</a>
+        <a href="#" class="nav-link" data-target="wrapper2">Naturopathy</a>
+        <a href="#" class="nav-link" data-target="footer">Unani</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Siddha</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Homeopathy</a>
+      </div>
+    </div>
+    <div class="main">
+        <div class="item">
+          <div class="item-graphics">
+            <div class="item-media">
+              <div class="media-preview-column">
+                <div class="preview-item">
+                  <img src="images/ajwain1.jpg" alt="Ajwain Leaves Image 1" class="preview-image" onclick="showInLargeView('images/ajwain1.jpg', 'image', this)">
+                </div>
+                <div class="preview-item">
+                  <img src="images/ajwain2.jpg" alt="Ajwain Leaves Image 2" class="preview-image" onclick="showInLargeView('images/ajwain2.jpg', 'image', this)">
+                </div>
+                <div class="preview-item">
+                  <video class="preview-video" onclick="showInLargeView('medias/ajwain.mp4', 'video', this)">
+                    <source src="medias/ajwain.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="preview-item">
+                  <img src="images/ajwain3D.jpg" alt="Ajwain Leaves 3D Model" class="preview-image" onclick="showInLargeView('3D Models/ajwain.glb', '3dmodel', this)">
+                </div>
+              </div>
+      
+              <div class="media-large-view-column">
+                <div class="large-view-item">
+                  <model-viewer
+                    id="large-view"
+                    src="3D Models/ajwain.glb"
+                    alt="3D model of Ajwain Leaves"
+                    auto-rotate
+                    camera-controls
+                    class="large-view-3dmodel"
+                  ></model-viewer>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-details">
+            <div class="audio-container">
+              <audio id="audio-player" src="medias/ajwain.mp3" controls></audio>
+            </div>
+      
+            <button id="comment-button">Leave a Comment</button>
+            <div class="item-name">Ajwain Leaves</div>
+            <div class="item-botanical-name">
+              Botanical Name: Trachyspermum ammi
+            </div>
+      
+            <div class="item-common-names">
+              <strong>Common Names:</strong> Carom Seeds, Omum, Ajowan (Hindi), Om (Gujarati)
+            </div>
+      
+            <div class="item-family"><strong>Family:</strong> Apiaceae</div>
+      
+            <div class="item-description">
+              <strong>Description:</strong> Ajwain leaves, also known as carom leaves, are aromatic leaves from the Ajwain plant. These leaves are highly fragrant and are used in cooking and traditional medicine for their strong flavor and medicinal properties.
+            </div>
+      
+            <div class="item-medicinal-uses">
+              <strong>Medicinal Uses:</strong>
+              <ul>
+                <li><strong>Digestive Health:</strong> Ajwain leaves are commonly used to relieve indigestion, gas, and bloating.</li>
+                <li><strong>Antibacterial Properties:</strong> Known to have antibacterial effects that can help fight infections.</li>
+                <li><strong>Anti-inflammatory:</strong> The leaves have anti-inflammatory properties that can help reduce pain and swelling.</li>
+                <li><strong>Cough and Cold Relief:</strong> Used in home remedies to treat cough, cold, and asthma.</li>
+                <li><strong>Relieves Stomach Issues:</strong> It may help in alleviating stomach cramps and discomfort.</li>
+              </ul>
+            </div>
+      
+            <div class="item-culinary-uses">
+              <strong>Culinary Uses:</strong>
+              <ul>
+                <li><strong>Spice in Cooking:</strong> Ajwain leaves are used in Indian cuisine, particularly in curries, soups, and vegetable dishes, to add a unique flavor.</li>
+                <li><strong>Ajwain Tea:</strong> A herbal tea made by boiling ajwain leaves is commonly consumed for its digestive and healing properties.</li>
+                <li><strong>Chutneys and Sauces:</strong> The leaves can be used to make chutneys or mixed into sauces to enhance the flavor.</li>
+              </ul>
+            </div>
+      
+            <div class="item-habitat">
+              <strong>Places Where Found:</strong>
+              <p>Ajwain is native to India and is also found in some parts of the Middle East and Mediterranean regions. It thrives in dry, tropical, and subtropical climates.</p>
+            </div>
+      
+            <div class="item-history">
+              <strong>Cultural and Historical Significance:</strong>
+              <p>Ajwain has been used in Ayurvedic medicine for centuries. Its use as a digestive aid and natural remedy is well-documented in traditional Indian medicine.</p>
+            </div>
+      
+            <div class="item-chemical-composition">
+              <strong>Chemical Composition:</strong>
+              <ul>
+                <li><strong>Thymol:</strong> The main compound in ajwain leaves that provides its characteristic flavor and has medicinal benefits.</li>
+                <li><strong>Flavonoids:</strong> Known for their antioxidant properties that help fight free radicals in the body.</li>
+                <li><strong>Terpenes:</strong> Essential oils in ajwain leaves contribute to its anti-inflammatory and antibacterial effects.</li>
+              </ul>
+            </div>
+      
+            <div class="item-usage">
+              <strong>How to Use:</strong>
+              <ul>
+                <li><strong>Ajwain Leaves Tea:</strong> Boil fresh ajwain leaves in water to make a soothing tea for digestive health.</li>
+                <li><strong>Leaf Powder:</strong> Dry ajwain leaves and grind them into powder for use in cooking or as a supplement.</li>
+                <li><strong>Fresh Leaves:</strong> Add fresh leaves to soups, stews, and curries for a strong flavor.</li>
+              </ul>
+            </div>
+      
+            <div class="item-safety">
+              <strong>Safety and Side Effects:</strong>
+              <p>Ajwain leaves are generally safe when consumed in moderation. Excessive consumption may cause stomach irritation. Pregnant women should consult a healthcare provider before using large amounts of ajwain leaves for medicinal purposes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+    <script>
+      function showInLargeView(source, type, element) {
+        var largeViewContainer = document.querySelector(".large-view-item");
+
+        // Clear the current content
+        largeViewContainer.innerHTML = "";
+
+        // Remove the 'selected' class from all preview items
+        var previewItems = document.querySelectorAll(".preview-item");
+        previewItems.forEach(function (item) {
+          item.classList.remove("selected");
+        });
+
+        // Add the 'selected' class to the clicked item
+        element.classList.add("selected");
+
+        if (type === "image") {
+          var imgElement = document.createElement("img");
+          imgElement.src = source;
+          imgElement.alt = "Large View";
+          imgElement.classList.add("large-view-image");
+          largeViewContainer.appendChild(imgElement);
+        } else if (type === "video") {
+          var videoElement = document.createElement("video");
+          videoElement.src = source;
+          videoElement.classList.add("large-view-video");
+          videoElement.setAttribute("controls", "controls");
+          largeViewContainer.appendChild(videoElement);
+          videoElement.play(); // Automatically start playing the video
+        } else if (type === "3dmodel") {
+          var modelViewer = document.createElement("model-viewer");
+          modelViewer.src = source;
+          modelViewer.alt = "3D model of Ginger";
+          modelViewer.autoRotate = true;
+          modelViewer.cameraControls = true;
+          modelViewer.classList.add("large-view-3dmodel");
+          largeViewContainer.appendChild(modelViewer);
+        }
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
+</html>

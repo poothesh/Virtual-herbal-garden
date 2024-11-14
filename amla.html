@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Herbal Website</title>
+    <link rel="stylesheet" href="css/item.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="logo/logo.png" width="120px" /></a>
+        </div>
+        <div class="search">
+          <div class="searchbar">
+            <input
+              id="search-input"
+              placeholder="Search by plant or medicine name..."
+            />
+            <button id="imagesearchbyn">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <button id="searchbtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      </div>
+      <div class="nav2">
+        <a href="ayurveda.html" class="nav-link">Ayurveda</a>
+        <a href="#" class="nav-link" data-target="wrapper2">Naturopathy</a>
+        <a href="#" class="nav-link" data-target="footer">Unani</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Siddha</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Homeopathy</a>
+      </div>
+    </div>
+    <div class="main">
+        <div class="item">
+          <div class="item-graphics">
+            <div class="item-media">
+              <div class="media-preview-column">
+                <div class="preview-item">
+                  <img src="images/amla.jpg" alt="Amla Tree Image 1" class="preview-image" onclick="showInLargeView('images/amla1.jpg', 'image', this)">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-details">
+            <div class="item-name">Amla Tree</div>
+            <div class="item-botanical-name">Botanical Name: Phyllanthus emblica</div>
+      
+            <div class="item-common-names">
+              <strong>Common Names:</strong> Amla, Indian Gooseberry, Amalaki
+            </div>
+      
+            <div class="item-family"><strong>Family:</strong> Phyllanthaceae</div>
+      
+            <div class="item-description">
+              <strong>Description:</strong> Amla is a small to medium-sized deciduous tree known for its round, greenish-yellow fruit. It is a powerhouse of vitamin C and has been used in traditional medicine for thousands of years due to its numerous health benefits.
+            </div>
+      
+            <div class="item-medicinal-uses">
+              <strong>Medicinal Uses:</strong>
+              <ul>
+                <li><strong>Rich in Vitamin C:</strong> Amla is one of the richest natural sources of Vitamin C, which boosts the immune system and promotes skin health.</li>
+                <li><strong>Antioxidant Properties:</strong> The fruit contains antioxidants that help fight free radicals and prevent cell damage.</li>
+                <li><strong>Digestive Health:</strong> Amla helps improve digestion and alleviates constipation and other gastrointestinal issues.</li>
+                <li><strong>Anti-inflammatory:</strong> The fruit and extracts have anti-inflammatory properties that can help reduce pain and swelling in conditions like arthritis.</li>
+                <li><strong>Hair Health:</strong> Amla oil is widely used in hair care to promote hair growth and prevent hair loss.</li>
+              </ul>
+            </div>
+      
+            <div class="item-culinary-uses">
+              <strong>Culinary Uses:</strong>
+              <ul>
+                <li><strong>Raw:</strong> The fresh fruit can be eaten raw, though it has a tart flavor.</li>
+                <li><strong>Pickles:</strong> Amla is often used to make tangy pickles, especially in Indian cuisine.</li>
+                <li><strong>Juice:</strong> Amla juice is popular as a health tonic, often consumed for its immune-boosting and digestive properties.</li>
+                <li><strong>Powder:</strong> Dried amla fruit is powdered and used in various culinary preparations or as a dietary supplement.</li>
+              </ul>
+            </div>
+      
+            <div class="item-habitat">
+              <strong>Places Where Found:</strong>
+              <p>The Amla tree is native to India but is now grown in many tropical and subtropical regions of Asia, Africa, and the Middle East.</p>
+            </div>
+      
+            <div class="item-history">
+              <strong>Cultural and Historical Significance:</strong>
+              <p>Amla has been a part of traditional Indian medicine (Ayurveda) for over 3,000 years. It is considered a symbol of health and longevity in various cultures. It is revered for its therapeutic properties and is often used in spiritual rituals and remedies.</p>
+            </div>
+      
+            <div class="item-chemical-composition">
+              <strong>Chemical Composition:</strong>
+              <ul>
+                <li><strong>Vitamin C:</strong> Amla contains 20 times more Vitamin C than an orange, which is essential for immune function and skin health.</li>
+                <li><strong>Polyphenols:</strong> These compounds provide antioxidant and anti-inflammatory benefits.</li>
+                <li><strong>Flavonoids:</strong> Known for their anti-inflammatory, antioxidant, and heart-protective effects.</li>
+              </ul>
+            </div>
+      
+            <div class="item-usage">
+              <strong>How to Use:</strong>
+              <ul>
+                <li><strong>Raw Fruit:</strong> Can be consumed fresh or added to salads and juices.</li>
+                <li><strong>Powder:</strong> Add amla powder to smoothies, milk, or water for a health boost.</li>
+                <li><strong>Oil:</strong> Amla oil is used for hair growth, scalp health, and to prevent premature graying.</li>
+                <li><strong>Juice:</strong> Drink fresh amla juice for detoxifying and immune-boosting effects.</li>
+              </ul>
+            </div>
+      
+            <div class="item-safety">
+              <strong>Safety and Side Effects:</strong>
+              <p>Amla is generally safe when consumed in normal food amounts. However, excessive consumption may cause stomach irritation or indigestion in some individuals. Pregnant women and those with specific health conditions should consult a healthcare provider before using amla therapeutically.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+    <script>
+      function showInLargeView(source, type, element) {
+        var largeViewContainer = document.querySelector(".large-view-item");
+
+        // Clear the current content
+        largeViewContainer.innerHTML = "";
+
+        // Remove the 'selected' class from all preview items
+        var previewItems = document.querySelectorAll(".preview-item");
+        previewItems.forEach(function (item) {
+          item.classList.remove("selected");
+        });
+
+        // Add the 'selected' class to the clicked item
+        element.classList.add("selected");
+
+        if (type === "image") {
+          var imgElement = document.createElement("img");
+          imgElement.src = source;
+          imgElement.alt = "Large View";
+          imgElement.classList.add("large-view-image");
+          largeViewContainer.appendChild(imgElement);
+        } else if (type === "video") {
+          var videoElement = document.createElement("video");
+          videoElement.src = source;
+          videoElement.classList.add("large-view-video");
+          videoElement.setAttribute("controls", "controls");
+          largeViewContainer.appendChild(videoElement);
+          videoElement.play(); // Automatically start playing the video
+        } else if (type === "3dmodel") {
+          var modelViewer = document.createElement("model-viewer");
+          modelViewer.src = source;
+          modelViewer.alt = "3D model of Ginger";
+          modelViewer.autoRotate = true;
+          modelViewer.cameraControls = true;
+          modelViewer.classList.add("large-view-3dmodel");
+          largeViewContainer.appendChild(modelViewer);
+        }
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
+</html>

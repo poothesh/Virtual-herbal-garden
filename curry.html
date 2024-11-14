@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Herbal Website</title>
+    <link rel="stylesheet" href="css/item.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="logo/logo.png" width="120px" /></a>
+        </div>
+        <div class="search">
+          <div class="searchbar">
+            <input
+              id="search-input"
+              placeholder="Search by plant or medicine name..."
+            />
+            <button id="imagesearchbyn">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <button id="searchbtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      </div>
+      <div class="nav2">
+        <a href="ayurveda.html" class="nav-link">Ayurveda</a>
+        <a href="#" class="nav-link" data-target="wrapper2">Naturopathy</a>
+        <a href="#" class="nav-link" data-target="footer">Unani</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Siddha</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Homeopathy</a>
+      </div>
+    </div>
+    <div class="main">
+        <div class="item">
+          <div class="item-graphics">
+            <div class="item-media">
+              <div class="media-preview-column">
+                <div class="preview-item">
+                  <img src="images/curryleaf1.jpg" alt="Curry Leaves Image 1" class="preview-image" onclick="showInLargeView('images/curryleaf1.jpg', 'image', this)">
+                </div>
+                <div class="preview-item">
+                  <img src="images/curryleaf2.jpg" alt="Curry Leaves Image 2" class="preview-image" onclick="showInLargeView('images/curryleaf2.jpg', 'image', this)">
+                </div>
+                <div class="preview-item">
+                  <video class="preview-video" onclick="showInLargeView('medias/curryleaf.mp4', 'video', this)">
+                    <source src="medias/curryleaf.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="preview-item">
+                  <img src="images/curryleaf3D.jpg" alt="Curry Leaves 3D Model" class="preview-image" onclick="showInLargeView('3D Models/curryleaf.glb', '3dmodel', this)">
+                </div>
+              </div>
+      
+              <div class="media-large-view-column">
+                <div class="large-view-item">
+                  <model-viewer
+                    id="large-view"
+                    src="3D Models/curryleaf.glb"
+                    alt="3D model of Curry Leaves"
+                    auto-rotate
+                    camera-controls
+                    class="large-view-3dmodel"
+                  ></model-viewer>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-details">
+            <div class="audio-container">
+              <audio id="audio-player" src="medias/curryleaf.mp3" controls></audio>
+            </div>
+      
+            <button id="comment-button">Leave a Comment</button>
+            <div class="item-name">Curry Leaves</div>
+            <div class="item-botanical-name">
+              Botanical Name: Murraya koenigii
+            </div>
+      
+            <div class="item-common-names">
+              <strong>Common Names:</strong> Curry Tree Leaves, Sweet Neem Leaves, Karuveppilai (Tamil), Kadipatta (Hindi)
+            </div>
+      
+            <div class="item-family"><strong>Family:</strong> Rutaceae</div>
+      
+            <div class="item-description">
+              <strong>Description:</strong> Curry leaves are aromatic leaves from the curry tree, widely used in Indian cooking and known for their distinct flavor. They have numerous health benefits, including antioxidant, anti-inflammatory, and digestive properties.
+            </div>
+      
+            <div class="item-medicinal-uses">
+              <strong>Medicinal Uses:</strong>
+              <ul>
+                <li><strong>Digestive Aid:</strong> Promotes digestive health and may reduce symptoms of indigestion.</li>
+                <li><strong>Antioxidant Properties:</strong> Helps fight free radicals and supports overall health.</li>
+                <li><strong>Diabetes Management:</strong> May help regulate blood sugar levels.</li>
+                <li><strong>Improves Hair Health:</strong> Used traditionally to reduce hair fall and promote hair growth.</li>
+                <li><strong>Anti-inflammatory Effects:</strong> Can reduce inflammation and symptoms of inflammation-related diseases.</li>
+              </ul>
+            </div>
+      
+            <div class="item-culinary-uses">
+              <strong>Culinary Uses:</strong>
+              <ul>
+                <li><strong>Flavoring Agent:</strong> Fresh or dried leaves are added to curries, chutneys, soups, and stir-fries.</li>
+                <li><strong>Spice Blends:</strong> Often ground into spice mixes or used to temper dishes for added aroma and flavor.</li>
+                <li><strong>Infusions:</strong> Used in teas or medicinal concoctions to promote health.</li>
+              </ul>
+            </div>
+      
+            <div class="item-habitat">
+              <strong>Places Where Found:</strong>
+              <p>Native to India and Sri Lanka, curry leaves are now cultivated in various tropical and subtropical regions, including Southeast Asia and parts of Africa.</p>
+            </div>
+      
+            <div class="item-history">
+              <strong>Cultural and Historical Significance:</strong>
+              <p>Curry leaves have been used for centuries in Ayurvedic medicine and are a staple in Indian cuisine. They symbolize health and flavor in many traditions.</p>
+            </div>
+      
+            <div class="item-chemical-composition">
+              <strong>Chemical Composition:</strong>
+              <ul>
+                <li><strong>Alkaloids:</strong> Compounds with various therapeutic benefits, including anti-inflammatory and neuroprotective properties.</li>
+                <li><strong>Flavonoids:</strong> Known for antioxidant and anti-inflammatory activities.</li>
+                <li><strong>Essential Oils:</strong> Provide aromatic qualities and possess antimicrobial properties.</li>
+              </ul>
+            </div>
+      
+            <div class="item-usage">
+              <strong>How to Use:</strong>
+              <ul>
+                <li><strong>Fresh Leaves:</strong> Add to recipes for flavor and aroma.</li>
+                <li><strong>Powdered Form:</strong> Use as a spice blend or seasoning.</li>
+                <li><strong>Oil Infusion:</strong> Infuse in oils for health and hair care applications.</li>
+              </ul>
+            </div>
+      
+            <div class="item-safety">
+              <strong>Safety and Side Effects:</strong>
+              <p>Curry leaves are safe when consumed in typical food amounts. Excessive consumption may cause mild digestive discomfort.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <script>
+      function showInLargeView(source, type, element) {
+        var largeViewContainer = document.querySelector(".large-view-item");
+
+        // Clear the current content
+        largeViewContainer.innerHTML = "";
+
+        // Remove the 'selected' class from all preview items
+        var previewItems = document.querySelectorAll(".preview-item");
+        previewItems.forEach(function (item) {
+          item.classList.remove("selected");
+        });
+
+        // Add the 'selected' class to the clicked item
+        element.classList.add("selected");
+
+        if (type === "image") {
+          var imgElement = document.createElement("img");
+          imgElement.src = source;
+          imgElement.alt = "Large View";
+          imgElement.classList.add("large-view-image");
+          largeViewContainer.appendChild(imgElement);
+        } else if (type === "video") {
+          var videoElement = document.createElement("video");
+          videoElement.src = source;
+          videoElement.classList.add("large-view-video");
+          videoElement.setAttribute("controls", "controls");
+          largeViewContainer.appendChild(videoElement);
+          videoElement.play(); // Automatically start playing the video
+        } else if (type === "3dmodel") {
+          var modelViewer = document.createElement("model-viewer");
+          modelViewer.src = source;
+          modelViewer.alt = "3D model of Ginger";
+          modelViewer.autoRotate = true;
+          modelViewer.cameraControls = true;
+          modelViewer.classList.add("large-view-3dmodel");
+          largeViewContainer.appendChild(modelViewer);
+        }
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,834 @@
+:root {
+    --animate-duration: 2s;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #dddddd;
+    height: 100vh;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #0000003b;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(27, 87, 0); 
+    border-radius: 6px; 
+    border: 3px solid #1b1b1b; 
+}
+html {
+    scrollbar-width:thin;
+    scrollbar-color: rgb(23, 114, 0) #1b1b1b00;
+}
+::-webkit-scrollbar-button {
+    background-color: rgb(46, 102, 0);
+    height: 16px;
+    width: 16px;
+}
+
+.container{
+    /* background: linear-gradient(45deg, #c0c0c0, #9bbbff96, #b7b6f7b0); */
+    background-color: #c4c4c4c5;
+    width: 100% !important;
+    padding: 0;
+    max-width: 1500px;
+}
+.header{
+    background-color: rgba(255, 255, 255, 0.87);
+    padding: 10px 0 0 0;
+    width: 100%;
+
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+.navbar a{
+    margin-top: 10px;
+    margin: 10px 15px; 
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: linear-gradient(to rigth, #cecece, #ffffff, #afa2a2);
+    transition: all ease 0.2s;
+    color: #001104;
+}
+.navbar a:hover{
+    color: rgb(0, 104, 9);
+}
+/* .nav2{
+    display: flex;
+    background-color: #a3a3a3;
+    padding: 12px;
+    text-align: center;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: 600;
+    gap: 50px;
+    margin-bottom: 15px;
+    color: #122500;
+} */
+.nav2 {
+    display: flex;
+    /* background-color: #a3a3a3; */
+    background-image: url("https://www.suretiimf.com/wp-content/uploads/2020/06/transparent-background-pattern-png-4-1024x512.png");
+    padding: 12px;
+    text-align: center;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: 600;
+    gap: 18px;
+    margin-bottom: 15px;
+    color: #122500;
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar item default style */
+.nav2 a {
+    color: inherit;
+    text-decoration: none;
+    padding: 12px 16px;
+    transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Navbar item hover effect */
+ .nav2 a:hover {
+    background: #035f00;
+    border-radius: 10px;
+    color: #fff;
+ }
+/* Active link style */
+.nav2 a.active {
+    background-color: #1225007a;
+    color: #ffffff;
+}
+
+/* Navbar background change on hover */
+.nav2:hover {
+    background-color: #a0a0a073;
+}
+
+
+.logo{
+    padding: 0;
+    position: absolute;
+    left: 20px;
+    display: flex;
+}
+.logo h2{
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    color: rgb(0, 56, 129);
+    font-weight: 500;
+    font-size: 26px;
+}
+#bookmark{
+    border: none;
+    font-size: 26px;
+    color: #003c05;
+    margin-left: 40px;
+}
+.nav-elements{
+    padding: 16px;
+    background-color: #dddddd;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.search{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}
+.searchbar{
+    position: relative;
+    display: flex;
+    margin: 10px;
+    height: 40px;
+    
+}
+.search input{
+    border: none;
+    padding: 12px;
+    outline: none;
+    width: 600px;
+    font-size: larger;
+    font-weight: 500;
+    border-radius: 6px 0 0 6px;
+    background-color: #e9e7e7;
+}
+.search button{
+    border: none;
+    font-size: larger;
+    padding: 0 12px;
+    background-color: #e9e7e7;
+    color: #003c05;
+    font-weight: 600;
+}
+#searchbtn{
+    border-radius: 0 6px 6px 0;
+}
+.line {
+    content: '';
+    width: 200px;
+    height: 8px;
+    background-color: #ffffff;
+    margin: 16px 0;
+    padding-left: 10px;
+    transform: skew(20deg);
+}
+.search-results {
+    position: absolute;
+    background-color: rgb(231, 250, 233);
+    border: none;
+    border-radius: 6px;
+    width: 690px;
+    top: 57px;
+    z-index: 30;
+    left: 10px;
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 8px 10px;
+    font-weight: 500;
+    font-size: larger;
+  }
+  
+  .search-result-item {
+    cursor: pointer;
+    margin-top: 12px;
+    color: #003c05;
+  }
+  
+  .search-result-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .not-found {
+    color: red;
+  }
+  
+/*---------------Navigation Menu with hooverable COntent-----------------*/
+.navigation{
+    background-color: #d5d6d2;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+.gap{
+    height: 4rem;
+}
+.navigation .menu li a{
+    color: #003c05;
+}
+.navigation .menu ul li a{
+    color: #003c05;
+}
+.navigation .menu li{
+    padding: 0.6rem;
+}
+.menu {
+    display: flex;
+    gap: 1em;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+.menu li {
+    position: relative;
+}
+.menu li a:hover {
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.menu li a {
+    color: #035f00;
+    text-decoration: none;
+    padding: 5px 14px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.arrow-icon {
+    margin-left: 12px;
+    transition: transform 0.4s ease; /* Apply transition for smooth rotation */
+}
+.rotate-up {
+    transform: rotate(180deg); /* Rotate arrow for upward direction */
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d6d6d6;
+    background-image: url('https://th.bing.com/th/id/R.bf2c814a4d6ca05a70e2677a37f045e3?rik=hYr%2bYzHtPTg7qw&riu=http%3a%2f%2fclipart-library.com%2fnew_gallery%2f120-1209434_nutritional-content-green-transparent-background-png.png&ehk=7OeRYTp%2bPlER3icbsgmz2c%2fs6fv3h8JSqeA0OSC4IUw%3d&risl=&pid=ImgRaw&r=0');
+    padding: 0;
+    z-index: 1;
+    margin-top: 0.6rem;
+    width: 12rem;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 10px 8px 7px 2px rgba(0, 0, 0, 0.2);
+    left: 0; /* Position the left edge at the horizontal center */
+}
+.s{
+    left: 0%;
+    transform: translateX(-50%); 
+}
+.dropdown-services:hover .dropdown-content {
+    display: block;
+}
+.d1 li{
+    background-image: url('https://th.bing.com/th/id/R.bf2c814a4d6ca05a70e2677a37f045e3?rik=hYr%2bYzHtPTg7qw&riu=http%3a%2f%2fclipart-library.com%2fnew_gallery%2f120-1209434_nutritional-content-green-transparent-background-png.png&ehk=7OeRYTp%2bPlER3icbsgmz2c%2fs6fv3h8JSqeA0OSC4IUw%3d&risl=&pid=ImgRaw&r=0');
+    
+}
+.dropdown-content li {
+    background-color: #ffffff;
+    padding: 0px;
+    text-align: left;
+    list-style: none;
+    border-bottom: 1px dashed #183d00;
+}
+.dropdown-content li:last-child{
+    border-bottom: 0;
+    border-radius: 0 0 6px 6px;
+}
+.dropdown-content li a {
+    color: #355200;
+    text-decoration: none;
+    display: block;
+    font-size: medium;
+    font-weight: 500;
+    padding: 5px  0;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+.dropdown-content li a:hover {
+    color: #035f00;
+}
+.dropdown-content li:hover .sub-dropdown {
+    display: block;
+}
+#academics{
+    width: 800px;
+    margin: 0.5rem auto;
+    padding: 0.6rem;
+}
+.dropdown-services:hover #academics {
+    display: flex;
+}
+#academics ul li:first-child{
+    background-color: #035f00;
+    padding: 5px 15px;
+    border-radius: 8px;
+    text-align: center;
+    color: #ffffff;
+    font-size: large;
+    font-weight: 500;
+    border-bottom: 0px;
+}
+#academics ul li:last-child{
+    border-bottom: 0px;
+}
+#academics li{
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem;
+    background-color: transparent;
+    border-bottom: 1px dashed #035f00;
+}
+#academics li a{
+
+    font-size: 1rem;
+}
+
+
+
+
+
+.highlights{
+    margin: 16px auto;
+    padding: 10px;
+    background-image: url('https://th.bing.com/th/id/OIP.lWGmg_8BJzWwqPx1D0n9JwHaDt?rs=1&pid=ImgDetMain');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.highlights iframe{
+    margin: 16px auto;
+    border-radius: 6px;
+}
+
+.c1{
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+    height: auto;
+}
+.c1left{
+    width: 50%;
+}
+.c1left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.c1right{
+    width: 50%;
+}
+.c1right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.c1left {
+    position: relative;
+    width: fit-content; /* Adjust this based on your image width */
+}
+
+.image-container {
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.845); /* Semi-transparent black background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    color: #fff;
+    font-size: larger;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.overlay h1,
+.overlay h2,
+.overlay h3 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+.overlay h2{
+    color: #d6ffba;
+}
+/* .supports{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 16px 0;
+} */
+.supports {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 16px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Hover effect on .supports section */
+.supports:hover {
+    background-color: #f0f0f0; /* Slight change in background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Child items inside .supports (like icons or links) */
+.supports .item {
+    margin: 0 15px;
+    padding: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Hover effect on items */
+
+
+
+
+
+.support{
+    width: 300px;
+    display: flex;
+    border-radius: 6px;
+    margin-right: 12px;
+    background-color: rgb(194, 253, 220);
+    font-size: large; 
+} 
+
+.supportText {
+    padding: 20px;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+    color: #707070;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease, font-size 0.3s ease;
+    cursor: pointer; /* Make it visually clickable */
+}
+
+/* Hover effect */
+.supportText:hover {
+    color: green; /* Change text color to blue */
+    width: 100%; /* Move text slightly to the right */
+    font-size: 1.1em; /* Slightly increase font size */
+    background-color: #f3f3f3; /* Add a light background color on hover */
+    
+}
+
+
+.supportIcon{
+    font-size: 2.6rem;
+    padding: 10px;
+    color: #035f00;
+}
+.supportText{
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+    color: #707070;
+}
+.supportText p{
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #000a35;
+}
+.supportText span{
+    font-size: small;
+}
+.selection-options{
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    background-color: #eeeeee;
+    background-image: url("https://www.suretiimf.com/wp-content/uploads/2020/06/transparent-background-pattern-png-4-1024x512.png");
+    margin: 10px;
+}
+
+.o{
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: 500;
+}
+/* .o select{
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    outline: none;
+    margin-top: 12px;
+} */
+.o select {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    outline: none;
+    margin-top: 12px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Hover effect */
+.o select:hover {
+    background-color: #e0e0e0; /* Lighter background on hover */
+    color: black; /* Change text color on hover */
+    border-radius: 8px; /* Slightly more rounded corners on hover */
+}
+
+/* Focus effect */
+.o select:focus {
+    border: 2px solid black; /* Highlight border on focus */
+    background-color: #fff; /* Lighter background when focused */
+    box-shadow: black; /* Add a subtle glow around the select element */
+}
+
+/* Active (clicked) effect */
+.o select:active {
+    background-color: #d0d0d0; /* Darker background when clicked */
+    transform: translateY(2px); /* Simulate a press effect */
+    box-shadow: none; /* Remove shadow on click */
+}
+
+a{
+    color: #003c05;
+}
+.items {
+    display: flex;               /* Display items in a row */
+    justify-content: center;     /* Center the items horizontally */
+    align-items: center;         /* Center the items vertically if they have different heights */
+    gap: 16px;                   /* Add space between items */
+    margin-top: 16px;            /* Space above the items container */
+    overflow-x: auto;            /* Allows horizontal scrolling if items overflow */
+    white-space: nowrap;         /* Prevent wrapping of items */
+}
+
+.item {
+    margin: 12px;
+    background-color: #dbdbdb;
+    padding: 10px;
+    height: 300px;
+    width: 200px;                /* Set a fixed width for consistency */
+    display: flex;
+    float:left ;
+    flex-direction: column;
+    align-items: center;         /* Center items horizontally inside each item */
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+    transition: transform 0.2s ease; /* Smooth zoom effect */
+}
+.item-name,
+.item-botanical-name{
+    font-weight: 600;
+}
+.item-image{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.item-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.benefits{
+    margin: 10px;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+}
+.benefits img{
+    margin: 20px auto;
+}
+.overview{
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 30px;
+    color: #0c2b00;
+    font-weight: 600;
+}
+.overviews{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.overview p{
+    position: relative;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+}
+.heading1::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: #94cf5d;
+    bottom: 1px;
+    border-radius: 2px;
+    left: calc(50% - 60px);
+}
+.heading1::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 6px;
+    background: #205700;
+    border-radius: 2px;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+.heading2 {
+    border: none; /* Remove other borders */
+    padding-bottom: 8px; /* Adjust as needed */
+    position: relative; /* Needed for ::after positioning */
+    display: inline-block;
+    text-align: center;
+    font-weight: bold; /* Optional for emphasis */
+    font-size: 32px;
+  }
+  
+  .heading2::after {
+    content: "";
+    position: absolute;
+    width: 100px; /* Adjust width as needed */
+    height: 3px;
+    background: #2f6310; /* Color of the border */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Correct centering */
+    border-radius: 2px; /* Rounded corners for a softer look */
+  }
+  
+  
+
+.overview-content{
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+    background-image: url('https://png.pngtree.com/png-clipart/20220124/original/pngtree-green-plants-png-image_7171650.png');
+    width: 360px;
+    border: 1px dotted #183d00;
+    padding: 10px;
+    margin: 20px;
+}
+.ot p{
+    font-size: medium;
+    text-align: justify;
+}
+.about{
+    display: flex;
+    margin: 16px 8px;
+}
+.aboutImage{
+    width: 50%;
+    height: auto;
+}
+.aboutImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-us{
+    background-color: rgba(0, 0, 0, 0.845);
+    background-image: url('https://th.bing.com/th/id/R.3e9007f3257b75a840f9422dfe66756d?rik=fTuzIXQ1fY1DTw&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2fgreen-transparent-background%2fgreen-transparent-background-20.png&ehk=NX3nhrMPanGnVCJOvx720C2Q9YrfB7BIXOuLyBfNMAY%3d&risl=&pid=ImgRaw&r=0');
+    background-position: center;
+    background-size: cover;
+    font-weight: 500;
+    padding: 12px;
+    width: 50%;
+    height: auto;
+    color: #fff;
+    font-size: larger;
+    font-weight: 600;
+}
+.about-us h3{
+    font-weight: 700;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.wave-box{
+    --mask:
+    radial-gradient(100.78px at 50% 137.5px,#000 99%,#0000 101%) calc(50% - 100px) 0/200px 100%,
+    radial-gradient(100.78px at 50% -87.5px,#0000 99%,#000 101%) 50% 50px/200px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+          height: 100px;
+          background-color: #00013f;
+}
+.wrapper3{
+    background-color: #f0f0f0c4;
+    padding: 20px;
+}
+#u1{
+    margin: 20px auto;
+    padding-bottom: 5px;
+    position: relative;
+    max-width: 200px;
+}
+.cunderline::before{
+    border-radius: 8px;
+    bottom: 0;
+    content: "";
+    height: 8px;
+    bottom: -2px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    position: absolute;
+    width: 24px;
+    background: #0099ff;
+    background: #00152c;
+}   
+.cunderline::after{
+    border-radius: 8px;
+    bottom: 0;
+    content: "";
+    height: 4px;
+    left: 0;
+    right: 0px;
+    margin: 0 auto;
+    position: absolute;
+    width: 150px;
+    background: #0099ff;
+    background: #00152c;
+}
+.container1{
+    display: grid;
+    background-color: transparent;
+    background-image: url("https://th.bing.com/th/id/OIP.pzTsy5rsYURP4dlN7EHQiQHaDt?rs=1&pid=ImgDetMain");
+    margin: 10px;
+}
+.cards{ 
+    display: flex;
+    margin: 0 auto;
+}
+.card{
+    width: 200px;
+    /* background: linear-gradient(45deg, #dfe8ff, #cce2ff, #9f8ba1); */
+    background: transparent;
+    margin: 16px 0;
+    border: none;
+    border-right: 3px solid #4a4d58b7;
+    border-radius: 0px;
+    padding: 16px;
+    text-align: center;
+}
+.card h2{
+    font-size: 32px;
+    font-weight: 600;
+    color: #000153;
+}
+.card h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+.card:last-child{
+    border: 0px;
+}

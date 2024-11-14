@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Herbal Website</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <style>
+    .container{
+        min-height: 100vh;
+        height: auto;
+    }
+    #bookmarks-container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        max-width: 1200px;
+        margin: 12px auto;
+        background-color: #fff;
+    }
+    .citem{
+        display: flex;
+        width: 90%;
+        max-width: 1000px;
+        background-color: #e5e6e2;
+        margin: 16px auto;
+        padding: 12px;
+        border-radius: 6px;
+        transition: all ease 0.5s;
+    }
+    .citem:hover{
+        background-color: #213500;
+        color: #fff;
+    }
+    .citemImage{
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .citemImage img{
+        width: 100%;
+    }
+    .citemDetails{
+        width: calc(100% - 250px);
+        padding: 12px;
+        font-size: medium;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .citem button{
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        background-color: #588f00;
+        color: #fff;
+        padding: 6px 12px;
+    }
+    .details{
+        display: flex;
+        padding: 0 10px;
+    }
+    .citemDetails p{
+        max-width: 98%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 4px;
+        font-weight: 500;
+        text-overflow: ellipsis;
+    }
+    .filter{
+        width:400px;
+        margin: 12px;
+        margin-left: 0;
+        padding: 10px;
+        background-color: #fff;
+        color: #131f00;
+        font-family:"SUSE", sans-serif;
+    }
+    .fh{
+        font-size: larger;
+    }
+    .filter-section{
+        margin: 18px 0;
+    }
+    .filter-section p{
+        margin-bottom: 6px;
+        font-size: large;
+        font-weight: 600;
+    }
+    .filter button{
+        border: none;
+        background-color: #213500;
+        color: #fff;
+        padding: 6px 12px;
+        width: 100%;
+        border-radius: 6px;
+        font-size: larger;
+    }
+  </style>
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="logo/logo.png" width="120px" /></a>
+        </div>
+        <div class="search">
+          <div class="searchbar">
+            <input
+              id="search-input"
+              placeholder="Search by plant or medicine name..."
+            />
+            <button id="imagesearchbyn">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <button id="searchbtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      </div>
+      <div class="nav2">
+        <a href="ayurveda.html" class="nav-link">Ayurveda</a>
+        <a href="yoga.html" class="nav-link" data-target="wrapper2">Naturopathy</a>
+        <a href="unani.html" class="nav-link" data-target="footer">Unani</a>
+        <a href="sidha.html" class="nav-link" data-target="wrapper4">Siddha</a>
+        <a href="homeopathy.html" class="nav-link" data-target="wrapper4">Homeopathy</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="details">
+        <div class="filter">
+            <strong class="fh">Filter Plants by Ayurveda&nbsp;<i class="fa-solid fa-filter"></i></strong>
+          
+            <!-- Filter by Dosha -->
+            <div class="filter-section">
+              <p>By Dosha</p>
+              <label><input type="checkbox" value="vata"> Vata</label>
+              <label><input type="checkbox" value="pitta"> Pitta</label>
+              <label><input type="checkbox" value="kapha"> Kapha</label>
+            </div>
+          
+            <!-- Filter by Rasa (Taste) -->
+            <div class="filter-section">
+              <p>By Rasa (Taste)</p>
+              <label><input type="checkbox" value="sweet"> Sweet (Madhura)</label>
+              <label><input type="checkbox" value="sour"> Sour (Amla)</label>
+              <label><input type="checkbox" value="salty"> Salty (Lavana)</label>
+              <label><input type="checkbox" value="bitter"> Bitter (Tikta)</label>
+              <label><input type="checkbox" value="pungent"> Pungent (Katu)</label>
+              <label><input type="checkbox" value="astringent"> Astringent (Kashaya)</label>
+            </div>
+          
+            <!-- Filter by Guna (Qualities) -->
+            <div class="filter-section">
+              <p>By Guna (Qualities)</p>
+              <label><input type="checkbox" value="light"> Light (Laghu)</label>
+              <label><input type="checkbox" value="heavy"> Heavy (Guru)</label>
+              <label><input type="checkbox" value="dry"> Dry (Ruksha)</label>
+              <label><input type="checkbox" value="oily"> Oily (Snigdha)</label>
+            </div>
+          
+            <!-- Filter by Virya (Potency) -->
+            <div class="filter-section">
+              <p>By Virya (Potency)</p>
+              <label><input type="checkbox" value="heating"> Heating (Ushna)</label>
+              <label><input type="checkbox" value="cooling"> Cooling (Shita)</label>
+            </div>
+          
+            <!-- Filter by Vipaka (Post-digestive effect) -->
+            <div class="filter-section">
+              <p>By Vipaka (Post-digestive effect)</p>
+              <label><input type="checkbox" value="sweet"> Sweet (Madhura)</label>
+              <label><input type="checkbox" value="sour"> Sour (Amla)</label>
+              <label><input type="checkbox" value="pungent"> Pungent (Katu)</label>
+            </div>
+          
+            <!-- Filter by Plant Part Used -->
+            <div class="filter-section">
+              <p>By Plant Part Used</p>
+              <label><input type="checkbox" value="root"> Root</label>
+              <label><input type="checkbox" value="leaf"> Leaf</label>
+              <label><input type="checkbox" value="stem"> Stem</label>
+              <label><input type="checkbox" value="flower"> Flower</label>
+              <label><input type="checkbox" value="fruit"> Fruit</label>
+              <label><input type="checkbox" value="seed"> Seed</label>
+            </div>
+          
+            <!-- Apply Filter Button -->
+            <button id="applyFilterBtn">Apply Filters</button>
+          </div>
+          
+        <div id="bookmarks-container">
+            <div class="citem">
+                <div class="citemImage">
+                    <img src="images/pudina.png">
+                  </div>
+                  <div class="citemDetails">
+                    <h2>pudina (Mentha)</h2>
+                    <p>Uses - Pudina is used to make drugs for treating nasal, rheumatism, neuralgia, carminative, and bronchial conditions.</p>
+                    <p>Chemical Composition -he main components of the essential oils from fresh peppermint leaves are menthol, menthone, menthofuran, 1,8-cineole, menthyl acetate, neoisomenthol, and limonene..</p>
+                    <p>Places Found - Indigenous to Europe and the Middle East, the plant is now widely spread and cultivated in many regions of the world..</p>
+                    <p>Medicinal Uses -  Pudina leaves can help with acne, scars, and skin infections. It can also help with dandruff and head lice..</p>
+                    <button>View More</button>
+                  </div> 
+            </div>
+            <div class="citem">
+              <div class="citemImage">
+                  <img src="images/keu.png">
+              </div>
+              <div class="citemDetails">
+                <h2>keu(Ocimum sanctum)</h2>
+                <p>Uses - The plant is used in Ayurveda and ethnomedicine to treat a variety of conditions, including fevers, coughs, skin diseases, and urinary tract infections.</p>
+                <p>Chemical Composition - The chemical composition of the Costus speciosus plant includes sesquiterpenes, such as α-humulene and zerumbone.</p>
+                <p>Places Found - The habitat where this species is found is roadside ditches and low-lying areas in tropical forests.</p>
+                <p>Medicinal Uses - he Keu plant is also used to treat rheumatism, bronchitis, fever, headache, asthma, flatulence, constipation, helminthiasis, leprosy, skin diseases, hiccough, anemia, and burning sensation on urination.</p>
+                <button>View More</button>
+                </div>
+          </div>
+          <div class="citem">
+              <div class="citemImage">
+                  <img src="images/Lavender-.png">
+              </div>
+              <div class="citemDetails">
+                <h2>Lavender (Lavandula)</h2>
+                <p>Uses - eadache, also known as cephalalgia, is the symptom of pain in the face, head, or neck. It can occur as a migraine, tension-type headache, or cluster headache..</p>
+                <p>Chemical Composition - A volatile oil that affects the central nervous system's aminobutyric acid receptors to produce sedation.</p>
+                <p>Places Found - Native to India; also found in Southeast Asia and tropical regions globally.</p>
+                <p>Medicinal Uses - Lavender can help with insomnia and agitation. Scientific evidence suggests that lavender aromatherapy can improve sleep quality and promote relaxation. 
+                  .</p>
+                <button>View More</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+    
+  </body>
+</html>

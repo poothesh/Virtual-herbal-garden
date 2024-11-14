@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Herbal Website</title>
+    <link rel="stylesheet" href="css/item.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="logo/logo.png" width="120px" /></a>
+        </div>
+        <div class="search">
+          <div class="searchbar">
+            <input
+              id="search-input"
+              placeholder="Search by plant or medicine name..."
+            />
+            <button id="imagesearchbyn">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <button id="searchbtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      </div>
+      <div class="nav2">
+        <a href="ayurveda.html" class="nav-link">Ayurveda</a>
+        <a href="#" class="nav-link" data-target="wrapper2">Naturopathy</a>
+        <a href="#" class="nav-link" data-target="footer">Unani</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Siddha</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Homeopathy</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="item">
+        <div class="item-graphics">
+          <div class="item-media">
+            <div class="media-preview-column">
+              <div class="preview-item">
+                <img src="images/image1.jpg" alt="Ginger Image 1" class="preview-image" onclick="showInLargeView('images/image1.jpg', 'image', this)">
+            </div>
+            <div class="preview-item">
+                <img src="images/image3.jpg" alt="Ginger Image 3" class="preview-image" onclick="showInLargeView('images/image3.jpg', 'image', this)">
+            </div>
+            <div class="preview-item">
+                <video class="preview-video" onclick="showInLargeView('medias/ginger.mp4', 'video', this)">
+                    <source src="medias/ginger.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="preview-item">
+                <img src="images/360.jpg" alt="Ginger 3D Model" class="preview-image" onclick="showInLargeView('3D Models/ginger.glb', '3dmodel', this)">
+            </div>
+            </div>
+    
+            <div class="media-large-view-column">
+              <div class="large-view-item">
+                <model-viewer
+                  id="large-view"
+                  src="3D Models/ginger.glb"
+                  alt="3D model of Ginger"
+                  auto-rotate
+                  camera-controls
+                  class="large-view-3dmodel"
+                ></model-viewer>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item-details">
+          <div class="audio-container">
+            <audio id="audio-player" src="medias/ginger.mp3" controls></audio>
+        </div>
+        
+        <button id="comment-button">Leave a Comment</button>
+          <div class="item-name">Ginger</div>
+          <div class="item-botanical-name">
+            Botanical Name: Zingiber officinale
+          </div>
+  
+          <div class="item-common-names">
+            <strong>Common Names:</strong> Ginger, Adrak (Hindi), Ingwer (German),
+            Jengibre (Spanish), Gingembre (French)
+          </div>
+  
+          <div class="item-family"><strong>Family:</strong> Zingiberaceae</div>
+  
+          <div class="item-description">
+            <strong>Description:</strong> Ginger is a flowering plant whose
+            rhizome, commonly known as ginger root, is widely used as a spice and
+            traditional medicine. The plant grows to about 3 to 4 feet tall, with
+            narrow, lance-shaped leaves and yellow-green flowers. The rhizome is
+            harvested for its pungent, aromatic properties.
+          </div>
+  
+          <div class="item-medicinal-uses">
+            <strong>Medicinal Uses:</strong>
+            <ul>
+              <li>
+                <strong>Digestive Health:</strong> Treats nausea, indigestion, and
+                stomach upset.
+              </li>
+              <li>
+                <strong>Anti-inflammatory Effects:</strong> Relieves joint pain
+                and stiffness in conditions like osteoarthritis.
+              </li>
+              <li>
+                <strong>Cold and Flu Relief:</strong> Used in remedies for colds,
+                flu, and respiratory ailments.
+              </li>
+              <li>
+                <strong>Pain Relief:</strong> Alleviates pain from menstrual
+                cramps, migraines, and muscle soreness.
+              </li>
+              <li>
+                <strong>Cardiovascular Health:</strong> May help reduce blood
+                pressure and lower cholesterol levels.
+              </li>
+              <li>
+                <strong>Blood Sugar Control:</strong> Can improve insulin
+                sensitivity and lower blood sugar levels.
+              </li>
+              <li>
+                <strong>Cancer Prevention:</strong> May reduce the risk of certain
+                cancers, particularly gastrointestinal cancers.
+              </li>
+            </ul>
+          </div>
+  
+          <div class="item-culinary-uses">
+            <strong>Culinary Uses:</strong>
+            <ul>
+              <li>
+                <strong>Spice:</strong> Used in fresh and dried forms in a variety
+                of cuisines.
+              </li>
+              <li>
+                <strong>Beverages:</strong> Used to make teas, ginger ale, and
+                other drinks.
+              </li>
+              <li>
+                <strong>Preserves and Pickles:</strong> Often served as a
+                condiment in Asian cuisine.
+              </li>
+            </ul>
+          </div>
+  
+          <div class="item-habitat">
+            <strong>Places Where Found:</strong>
+            <p>
+              Ginger is believed to have originated in Southeast Asia and is now
+              cultivated in tropical and subtropical regions worldwide, including
+              India, China, Nigeria, Thailand, and Indonesia.
+            </p>
+          </div>
+  
+          <div class="item-history">
+            <strong>Cultural and Historical Significance:</strong>
+            <p>
+              Ginger has been used in traditional medicine systems like Ayurveda
+              and Traditional Chinese Medicine for thousands of years and has been
+              an important commodity in the spice trade.
+            </p>
+          </div>
+  
+          <div class="item-chemical-composition">
+            <strong>Chemical Composition:</strong>
+            <ul>
+              <li>
+                <strong>Gingerol:</strong> The main bioactive compound with
+                anti-inflammatory and antioxidant properties.
+              </li>
+              <li>
+                <strong>Shogaol:</strong> Contributes to ginger’s spicy flavor and
+                has medicinal effects.
+              </li>
+              <li>
+                <strong>Zingiberene:</strong> An essential oil that contributes to
+                ginger's aroma and flavor.
+              </li>
+            </ul>
+          </div>
+  
+          <div class="item-usage">
+            <strong>How to Use:</strong>
+            <ul>
+              <li>
+                <strong>Fresh Ginger:</strong> Can be sliced, grated, or juiced.
+              </li>
+              <li>
+                <strong>Dried Ginger:</strong> Used as a spice in baking and
+                cooking.
+              </li>
+              <li>
+                <strong>Ginger Oil:</strong> Used in aromatherapy and topical
+                applications.
+              </li>
+              <li>
+                <strong>Supplements:</strong> Available in capsule or tablet form.
+              </li>
+            </ul>
+          </div>
+          <div class="item-safety">
+            <strong>Safety and Side Effects:</strong>
+            <p>
+              Ginger is generally safe for most people when used in moderate
+              amounts. Pregnant women and those on anticoagulant medications
+              should consult a healthcare provider before use.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <script>
+      function showInLargeView(source, type, element) {
+        var largeViewContainer = document.querySelector(".large-view-item");
+
+        // Clear the current content
+        largeViewContainer.innerHTML = "";
+
+        // Remove the 'selected' class from all preview items
+        var previewItems = document.querySelectorAll(".preview-item");
+        previewItems.forEach(function (item) {
+          item.classList.remove("selected");
+        });
+
+        // Add the 'selected' class to the clicked item
+        element.classList.add("selected");
+
+        if (type === "image") {
+          var imgElement = document.createElement("img");
+          imgElement.src = source;
+          imgElement.alt = "Large View";
+          imgElement.classList.add("large-view-image");
+          largeViewContainer.appendChild(imgElement);
+        } else if (type === "video") {
+          var videoElement = document.createElement("video");
+          videoElement.src = source;
+          videoElement.classList.add("large-view-video");
+          videoElement.setAttribute("controls", "controls");
+          largeViewContainer.appendChild(videoElement);
+          videoElement.play(); // Automatically start playing the video
+        } else if (type === "3dmodel") {
+          var modelViewer = document.createElement("model-viewer");
+          modelViewer.src = source;
+          modelViewer.alt = "3D model of Ginger";
+          modelViewer.autoRotate = true;
+          modelViewer.cameraControls = true;
+          modelViewer.classList.add("large-view-3dmodel");
+          largeViewContainer.appendChild(modelViewer);
+        }
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Herbal Website</title>
+    <link rel="stylesheet" href="css/item.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="logo/logo.png" width="120px" /></a>
+        </div>
+        <div class="search">
+          <div class="searchbar">
+            <input
+              id="search-input"
+              placeholder="Search by plant or medicine name..."
+            />
+            <button id="imagesearchbyn">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <button id="searchbtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      </div>
+      <div class="nav2">
+        <a href="ayurveda.html" class="nav-link">Ayurveda</a>
+        <a href="#" class="nav-link" data-target="wrapper2">Naturopathy</a>
+        <a href="#" class="nav-link" data-target="footer">Unani</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Siddha</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Homeopathy</a>
+      </div>
+    </div>
+    <div class="main">
+        <div class="item">
+          <div class="item-graphics">
+            <div class="item-media">
+              <div class="media-preview-column">
+                <div class="preview-item">
+                  <img src="images/indianpennywort1.jpg" alt="Indian Pennywort Leaves Image 1" class="preview-image" onclick="showInLargeView('images/indianpennywort1.jpg', 'image', this)">
+                </div>
+                <div class="preview-item">
+                  <img src="images/indianpennywort2.jpg" alt="Indian Pennywort Leaves Image 2" class="preview-image" onclick="showInLargeView('images/indianpennywort2.jpg', 'image', this)">
+                </div>
+                <div class="preview-item">
+                  <video class="preview-video" onclick="showInLargeView('medias/indianpennywort.mp4', 'video', this)">
+                    <source src="medias/indianpennywort.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="preview-item">
+                  <img src="images/indianpennywort3D.jpg" alt="Indian Pennywort 3D Model" class="preview-image" onclick="showInLargeView('3D Models/indianpennywort.glb', '3dmodel', this)">
+                </div>
+              </div>
+      
+              <div class="media-large-view-column">
+                <div class="large-view-item">
+                  <model-viewer
+                    id="large-view"
+                    src="3D Models/indianpennywort.glb"
+                    alt="3D model of Indian Pennywort Leaves"
+                    auto-rotate
+                    camera-controls
+                    class="large-view-3dmodel"
+                  ></model-viewer>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-details">
+            <div class="audio-container">
+              <audio id="audio-player" src="medias/indianpennywort.mp3" controls></audio>
+            </div>
+      
+            <button id="comment-button">Leave a Comment</button>
+            <div class="item-name">Indian Pennywort Leaves</div>
+            <div class="item-botanical-name">
+              Botanical Name: Centella Asiatica
+            </div>
+      
+            <div class="item-common-names">
+              <strong>Common Names:</strong> Indian Pennywort, Gotu Kola, Brahmi, Mandukaparni, Asiatic Pennywort
+            </div>
+      
+            <div class="item-family"><strong>Family:</strong> Apiaceae</div>
+      
+            <div class="item-description">
+              <strong>Description:</strong> Indian Pennywort, also known as Gotu Kola, is a small, green, creeping plant with round, kidney-shaped leaves. It is widely used in traditional medicine for its healing and cognitive-enhancing properties.
+            </div>
+      
+            <div class="item-medicinal-uses">
+              <strong>Medicinal Uses:</strong>
+              <ul>
+                <li><strong>Brain Health:</strong> Known for improving memory and cognitive function. Often used to enhance mental clarity and focus.</li>
+                <li><strong>Anxiety Relief:</strong> The plant is traditionally used to reduce anxiety and promote relaxation.</li>
+                <li><strong>Wound Healing:</strong> Known for its ability to promote the healing of wounds and cuts when applied topically.</li>
+                <li><strong>Skin Health:</strong> Can be used to treat skin conditions like eczema, psoriasis, and scars.</li>
+                <li><strong>Blood Circulation:</strong> Promotes better blood circulation and is used to treat varicose veins and other circulatory issues.</li>
+              </ul>
+            </div>
+      
+            <div class="item-culinary-uses">
+              <strong>Culinary Uses:</strong>
+              <ul>
+                <li><strong>Herbal Tea:</strong> The leaves are used to make a refreshing herbal tea, often consumed for its health benefits.</li>
+                <li><strong>Fresh Leaves:</strong> Used in salads, soups, and smoothies for their mild flavor and medicinal properties.</li>
+              </ul>
+            </div>
+      
+            <div class="item-habitat">
+              <strong>Places Where Found:</strong>
+              <p>Indian Pennywort is native to Asia, especially in regions like India, China, and Southeast Asia. It thrives in moist, tropical environments and is often found in wetlands, marshes, and along water sources.</p>
+            </div>
+      
+            <div class="item-history">
+              <strong>Cultural and Historical Significance:</strong>
+              <p>Indian Pennywort has been used in Ayurvedic and Traditional Chinese Medicine for centuries. In Ayurveda, it is believed to enhance longevity and improve mental clarity. It is also considered a sacred herb in many cultures for its mind-boosting properties.</p>
+            </div>
+      
+            <div class="item-chemical-composition">
+              <strong>Chemical Composition:</strong>
+              <ul>
+                <li><strong>Triterpenoids:</strong> Active compounds believed to enhance cognitive function and promote healing.</li>
+                <li><strong>Flavonoids:</strong> Offer antioxidant benefits that support skin and blood vessel health.</li>
+                <li><strong>Saponins:</strong> Have anti-inflammatory and immune-boosting properties.</li>
+              </ul>
+            </div>
+      
+            <div class="item-usage">
+              <strong>How to Use:</strong>
+              <ul>
+                <li><strong>Leaf Powder:</strong> Can be added to smoothies or teas for cognitive enhancement and overall health.</li>
+                <li><strong>Topical Application:</strong> The leaves or their extract can be applied to the skin to treat wounds or improve skin conditions.</li>
+                <li><strong>Tea:</strong> Steep fresh or dried leaves in hot water to make a soothing herbal tea.</li>
+              </ul>
+            </div>
+      
+            <div class="item-safety">
+              <strong>Safety and Side Effects:</strong>
+              <p>Indian Pennywort is generally safe when consumed in moderate amounts. It is recommended to consult a healthcare provider before using it for medicinal purposes, especially for pregnant or breastfeeding women. Excessive use may cause digestive issues or skin irritation in some individuals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <script>
+      function showInLargeView(source, type, element) {
+        var largeViewContainer = document.querySelector(".large-view-item");
+
+        // Clear the current content
+        largeViewContainer.innerHTML = "";
+
+        // Remove the 'selected' class from all preview items
+        var previewItems = document.querySelectorAll(".preview-item");
+        previewItems.forEach(function (item) {
+          item.classList.remove("selected");
+        });
+
+        // Add the 'selected' class to the clicked item
+        element.classList.add("selected");
+
+        if (type === "image") {
+          var imgElement = document.createElement("img");
+          imgElement.src = source;
+          imgElement.alt = "Large View";
+          imgElement.classList.add("large-view-image");
+          largeViewContainer.appendChild(imgElement);
+        } else if (type === "video") {
+          var videoElement = document.createElement("video");
+          videoElement.src = source;
+          videoElement.classList.add("large-view-video");
+          videoElement.setAttribute("controls", "controls");
+          largeViewContainer.appendChild(videoElement);
+          videoElement.play(); // Automatically start playing the video
+        } else if (type === "3dmodel") {
+          var modelViewer = document.createElement("model-viewer");
+          modelViewer.src = source;
+          modelViewer.alt = "3D model of Ginger";
+          modelViewer.autoRotate = true;
+          modelViewer.cameraControls = true;
+          modelViewer.classList.add("large-view-3dmodel");
+          largeViewContainer.appendChild(modelViewer);
+        }
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
+</html>

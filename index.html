@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Herbal Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main">
+          <!-- Popup Modal -->
+    
+
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="logo/logo.png" width="120px" /></a>
+        </div>
+        <div class="search">
+          <div class="searchbar">
+            <input
+              id="search-input"
+              placeholder="Search by plant or medicine name..."
+            />
+            <button id="imagesearchbyn">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <button id="searchbtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+        
+      </div>
+      <div class="nav2">
+        <a href="ayurveda.html" class="nav-link">Ayurveda</a>
+        <a href="#" class="nav-link" data-target="wrapper2">Yoga & Naturopathy</a>
+        <a href="#" class="nav-link" data-target="footer">Unani</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Siddha</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Homeopathy</a>
+      </div>
+    </div>
+    <div class="container">
+      
+      <div class="c1">
+        <div class="c1left">
+          <div class="image-container">
+            <img src="images/1.jpg" alt="Image" />
+            <div class="overlay">
+              <h1>Explore Nature's Healing Wisdom</h1>
+              <h2>With Our</h2>
+              <h3>Virtual Herbal Garden</h3>
+              <div class="line"></div>
+              <p>
+                Discover the diverse world of medicinal plants used in AYUSH
+                with our immersive Virtual Herbal Garden. Learn, interact, and
+                experience the ancient traditions of herbal medicine through 3D
+                models, detailed information, and intuitive features.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="c1right">
+          <img src="images/2.jpg" />
+        </div>
+      </div>
+      <div class="supports">
+        <div class="support">
+          <div class="supportIcon">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <div class="supportText">
+            <p>Better Information</p>
+            <span>Integrated Audio and Video Content</span>
+          </div>
+        </div>
+        <div class="support">
+          <div class="supportIcon">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div class="supportText">
+            <p>Interactive Models</p>
+            <span>Interactive 3D Plant Models</span>
+          </div>
+        </div>
+      </div>
+      <div class="selection-options">
+        <div class="o">
+          <label for="medicinal-uses">Select by Medicinal Uses:</label>
+          <select id="medicinal-uses">
+            <option value="">--Select an Option--</option>
+            <option value="anti-inflammatory">Anti-inflammatory</option>
+            <option value="antioxidant">Antioxidant</option>
+            <option value="digestive">Digestive</option>
+            <option value="immune-support">Immune Support</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+
+        <div class="o">
+          <label for="region">Select by Region:</label>
+          <select id="region">
+            <option value="">--Select an Option--</option>
+            <option value="Tamil-Nadu">Tamil-Nadu</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Andra-Pradesh">Andra-Pradesh</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+
+        <div class="o">
+          <label for="type">Select by Type:</label>
+          <select id="type">
+            <option value="">--Select an Option--</option>
+            <option value="herb">Herb</option>
+            <option value="shrub">Shrub</option>
+            <option value="tree">Tree</option>
+            <option value="vine">Vine</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="items">
+          <div id="item-container"></div>  <!-- Container for Medicinal Uses -->
+          <div id="region-container"></div> <!-- Separate container for Region -->
+          <div id="type-container"></div>   <!-- Separate container for Type -->
+        </div>
+      </div>
+      
+      
+
+      <div class="slider">
+        <h3 style="text-align: center; margin: 16px; font-weight: 600">
+          Some Commonly Used Medicinal Plants
+        </h3>
+        <div class="items">
+          <!-- Commonly used plants items will be added dynamically based on filters -->
+          <div id="common-plants-container"></div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="aboutImage">
+          <img
+            src="images/i2.jpeg"
+          />
+        </div>
+        <div class="about-us">
+          <h3><i class="fa-solid fa-circle-info"></i>&nbsp;About Us</h3>
+          <p>
+            The Ministry of Ayush was formed on the 9th of November 2014 with a
+            vision of reviving the profound knowledge of our ancient systems of
+            medicine and ensuring the optimal development and propagation of the
+            Ayush systems of healthcare. Earlier, the Department of Indian
+            System of Medicine and Homoeopathy (ISM&H) formed in 1995, was
+            responsible for the development of these systems. It was then
+            renamed as the Department of Ayurveda, Yoga, and Naturopathy, Unani,
+            Siddha and Homoeopathy (Ayush) in November 2003 with focused
+            attention towards education and research in Ayurveda, Yoga and
+            Naturopathy, Unani, Siddha, and Homoeopathy.
+          </p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="cards">
+          <div class="card">
+            <h2>1K+</h2>
+            <h3>Herbal Plants Cataloged</h3>
+          </div>
+          <div class="card">
+            <h2>500+</h2>
+            <h3>Verified Ayurvedic Remedies</h3>
+          </div>
+          <div class="card">
+            <h2>100K+</h2>
+            <h3>Monthly Website Visits</h3>
+          </div>
+        </div>        
+    </div>
+      <div class="overview">
+        <p class="heading1">Ayush Overview</p>
+        <div class="overviews">
+          <div class="overview-content">
+            <div class="oi">
+              <img src="logo/ayurveda.png" />
+            </div>
+            <div class="ot">
+              <h3>Ayurveda</h3>
+              <p>
+                Ayurveda is the time tested traditional system of medicine of
+                India. The term 'Ayurveda' meaning 'the knowledge of life'
+                comprises of two Sanskrit words viz 'Ayu' meaning 'Life' and
+                'Veda' meaning 'Knowledge' or 'Science'.
+              </p>
+            </div>
+          </div>
+          <div class="overview-content">
+            <div class="oi">
+              <img src="logo/yoga.png" />
+            </div>
+            <div class="ot">
+              <h3>Yoga & Naturopathy</h3>
+              <p>
+                The word 'Yoga' comes from the Sanskrit word 'yuj' which means
+                'to unite or integrate'. Yoga is about the union of a person's
+                own consciousness and the universal consciousness. Naturopathy
+                is a cost effective drugless, non-invasive therapy involving the
+                use of natural materials for health care and healthy living.
+              </p>
+            </div>
+          </div>
+          <div class="overview-content">
+            <div class="oi">
+              <img src="logo/unani.png" />
+            </div>
+            <div class="ot">
+              <h3>Unani</h3>
+              <p>
+                Unani System of medicine is a comprehensive medical system,
+                which provides preventive, promotive, curative and
+                rehabilitative health care. The system is holistic in nature and
+                takes into account the whole personality of an individual rather
+                than taking a reductionist approach towards disease.
+              </p>
+            </div>
+          </div>
+          <div class="overview-content">
+            <div class="oi">
+              <img src="logo/siddha.png" />
+            </div>
+            <div class="ot">
+              <h3>Siddha</h3>
+              <p>
+                The Siddha system is an ancient system of medicine in India. The
+                word 'Siddha' is derived from the root word "Citti" meaning
+                attainment of perfection, eternal bliss and accomplishment.
+              </p>
+            </div>
+          </div>
+          <div class="overview-content">
+            <div class="oi">
+              <img src="logo/sowa.png" />
+            </div>
+            <div class="ot">
+              <h3>Sowa Rigpa</h3>
+              <p>
+                The word 'Yoga' comes from the Sanskrit word 'yuj' which means
+                'to unite or integrate'. Yoga is about the union of a person's
+                own consciousness and the universal consciousness. Naturopathy
+                is a cost effective drugless, non-invasive therapy involving the
+                use of natural materials for health care and healthy living.
+              </p>
+            </div>
+          </div>
+          <div class="overview-content">
+            <div class="oi">
+              <img src="logo/unani.png" />
+            </div>
+            <div class="ot">
+              <h3>Homeopathy</h3>
+              <p>
+                'Homoeopathy' was introduced as a scientific system of drug
+                therapeutics by a German Physician, Dr. Christian Frederick
+                Samuel Hahnemann in 1805. The principle of Homoeopathy is
+                Similia Similibus Curentur i.e. let likes be treated by likes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="highlights">
+        <p class="heading2">A Quick Overview</p>
+        <iframe width="800" height="415" src="https://www.youtube.com/embed/MOLreWl4lnI?si=NpfnxYM2GYoQh-9m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <footer>
+      <p class="copyright" >
+        All Rights Reserved &nbsp;<i class="fa-regular fa-copyright"></i
+        >&nbsp; 2024
+      </p>
+    </footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

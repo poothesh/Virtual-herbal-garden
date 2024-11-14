@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Herbal Website</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <style>
+    .container{
+        min-height: 100vh;
+        height: auto;
+    }
+    #bookmarks-container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        max-width: 1200px;
+        margin: 12px auto;
+        background-color: #fff;
+    }
+    .citem{
+        display: flex;
+        width: 90%;
+        max-width: 1000px;
+        background-color: #e5e6e2;
+        margin: 16px auto;
+        padding: 12px;
+        border-radius: 6px;
+        transition: all ease 0.5s;
+    }
+    .citem:hover{
+        background-color: #213500;
+        color: #fff;
+    }
+    .citemImage{
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .citemImage img{
+        width: 100%;
+    }
+    .citemDetails{
+        width: calc(100% - 250px);
+        padding: 12px;
+        font-size: medium;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .citem button{
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        background-color: #588f00;
+        color: #fff;
+        padding: 6px 12px;
+    }
+    .details{
+        display: flex;
+        padding: 0 10px;
+    }
+    .citemDetails p{
+        max-width: 98%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 4px;
+        font-weight: 500;
+        text-overflow: ellipsis;
+    }
+    .filter{
+        width:400px;
+        margin: 12px;
+        margin-left: 0;
+        padding: 10px;
+        background-color: #fff;
+        color: #131f00;
+        font-family:"SUSE", sans-serif;
+    }
+    .fh{
+        font-size: larger;
+    }
+    .filter-section{
+        margin: 18px 0;
+    }
+    .filter-section p{
+        margin-bottom: 6px;
+        font-size: large;
+        font-weight: 600;
+    }
+    .filter button{
+        border: none;
+        background-color: #213500;
+        color: #fff;
+        padding: 6px 12px;
+        width: 100%;
+        border-radius: 6px;
+        font-size: larger;
+    }
+  </style>
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="logo/logo.png" width="120px" /></a>
+        </div>
+        <div class="search">
+          <div class="searchbar">
+            <input
+              id="search-input"
+              placeholder="Search by plant or medicine name..."
+            />
+            <button id="imagesearchbyn">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <button id="searchbtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      </div>
+      <div class="nav2" style="padding: right 30px; ;">
+        <a href="ayurveda.html" class="nav-link">Ayurveda</a>
+        <a href="yoga.html" class="nav-link" data-target="wrapper2">Naturopathy</a>
+        <a href="unani.html" class="nav-link" data-target="footer">Unani</a>
+        <a href="sidha.html" class="nav-link" data-target="wrapper4">Siddha</a>
+        <a href="homeopathy.html" class="nav-link" data-target="wrapper4">Homeopathy</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="details">
+        <div class="filter">
+            <strong class="fh">Filter Plants by Ayurveda&nbsp;<i class="fa-solid fa-filter"></i></strong>
+          
+            <!-- Filter by Dosha -->
+            <div class="filter-section">
+              <p>By Dosha</p>
+              <label><input type="checkbox" value="vata"> Vata</label>
+              <label><input type="checkbox" value="pitta"> Pitta</label>
+              <label><input type="checkbox" value="kapha"> Kapha</label>
+            </div>
+          
+            <!-- Filter by Rasa (Taste) -->
+            <div class="filter-section">
+              <p>By Taste</p>
+              <label><input type="checkbox" value="sweet"> Sweet </label>
+              <label><input type="checkbox" value="sour"> Sour </label>
+              <label><input type="checkbox" value="salty"> Salty </label>
+              <label><input type="checkbox" value="bitter"> Bitter </label>
+              <label><input type="checkbox" value="pungent"> Pungent </label>
+              <label><input type="checkbox" value="astringent"> Astringent </label>
+            </div>
+          
+            <!-- Filter by Guna (Qualities) -->
+            <div class="filter-section">
+              <p>By Qualities</p>
+              <label><input type="checkbox" value="light"> Light </label>
+              <label><input type="checkbox" value="heavy"> Heavy </label>
+              <label><input type="checkbox" value="dry"> Dry</label>
+              <label><input type="checkbox" value="oily"> Oily </label>
+            </div>
+          
+            <!-- Filter by Virya (Potency) -->
+            <div class="filter-section">
+              <p>By Potency</p>
+              <label><input type="checkbox" value="heating"> Heating </label>
+              <label><input type="checkbox" value="cooling"> Cooling </label>
+            </div>
+          
+            <!-- Filter by Vipaka (Post-digestive effect) -->
+            <div class="filter-section">
+              <p>By Post-digestive effect</p>
+              <label><input type="checkbox" value="sweet"> Sweet </label>
+              <label><input type="checkbox" value="sour"> Sour </label>
+              <label><input type="checkbox" value="pungent"> Pungent </label>
+            </div>
+          
+            <!-- Filter by Plant Part Used -->
+            <div class="filter-section">
+              <p>By Plant Part Used</p>
+              <label><input type="checkbox" value="root"> Root</label>
+              <label><input type="checkbox" value="leaf"> Leaf</label>
+              <label><input type="checkbox" value="stem"> Stem</label>
+              <label><input type="checkbox" value="flower"> Flower</label>
+              <label><input type="checkbox" value="fruit"> Fruit</label>
+              <label><input type="checkbox" value="seed"> Seed</label>
+            </div>
+          
+            <!-- Apply Filter Button -->
+            <button id="applyFilterBtn">Apply Filters</button>
+          </div>
+          
+        <div id="bookmarks-container">
+            <div class="citem">
+                <div class="citemImage">
+                    <img src="images/ashwagandha.jpeg">
+                </div>
+                <div class="citemDetails">
+                    <h2>Ashwagandha (Withania somnifera)</h2>
+                    <p>Uses - Stress relief, improving energy, enhancing overall vitality, boosting immunity, and improving cognitive function.</p>
+                    <p>Chemical Composition - Alkaloids (e.g., withanine), steroidal lactones (withanolides), saponins, iron, and amino acids.</p>
+                    <p>Places Found - Native to India, North Africa, and the Middle East; also cultivated in some parts of the USA.</p>
+                    <p>Medicinal Uses - Reduces cortisol levels, helping with stress and anxiety management.Improves physical endurance and muscle strength.</p>
+                    <button>View More</button>
+                </div>   
+            </div>
+            <div class="citem">
+              <div class="citemImage">
+                  <img src="images/tulsi.jpeg">
+              </div>
+              <div class="citemDetails">
+                <h2>Tulsi (Ocimum sanctum)</h2>
+                <p>Uses - Immunity booster, stress relief, improving respiratory health, and promoting skin health.</p>
+                <p>Chemical Composition - Essential oils (e.g., eugenol, camphor), flavonoids, rosmarinic acid, and various polyphenols.</p>
+                <p>Places Found - Widely cultivated in India, Southeast Asia, and tropical regions worldwide.</p>
+                <p>Medicinal Uses - Promotes respiratory health by easing congestion and cough.Helps reduce fever and acts as a natural immune booster.</p>
+                <button>View More</button>
+                </div>
+          </div>
+          <div class="citem">
+              <div class="citemImage">
+                  <img src="images/amla.jpg">
+              </div>
+              <div class="citemDetails">
+                <h2>Amla (Phyllanthus emblica)</h2>
+                <p>Uses - Rich source of Vitamin C, boosts immunity, improves skin health, and supports digestion.</p>
+                <p>Chemical Composition - Vitamin C, polyphenols, tannins, flavonoids, and minerals like calcium and phosphorus.</p>
+                <p>Places Found - Native to India; also found in Southeast Asia and tropical regions globally.</p>
+                <p>Medicinal Uses - Strengthens immunity due to its high Vitamin C content.Promotes hair growth and improves skin texture.</p>
+                <button>View More</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

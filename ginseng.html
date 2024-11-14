@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Herbal Website</title>
+    <link rel="stylesheet" href="css/item.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="logo/logo.png" width="120px" /></a>
+        </div>
+        <div class="search">
+          <div class="searchbar">
+            <input
+              id="search-input"
+              placeholder="Search by plant or medicine name..."
+            />
+            <button id="imagesearchbyn">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <button id="searchbtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      </div>
+      <div class="nav2">
+        <a href="ayurveda.html" class="nav-link">Ayurveda</a>
+        <a href="#" class="nav-link" data-target="wrapper2">Naturopathy</a>
+        <a href="#" class="nav-link" data-target="footer">Unani</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Siddha</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Homeopathy</a>
+      </div>
+    </div>
+    <div class="main">
+        <div class="item">
+          <div class="item-graphics">
+            <div class="item-media">
+              <div class="media-preview-column">
+                <div class="preview-item">
+                  <img src="images/ginseng1.jpg" alt="Ginseng Leaves Image 1" class="preview-image" onclick="showInLargeView('images/ginseng1.jpg', 'image', this)">
+                </div>
+                <div class="preview-item">
+                  <img src="images/ginseng2.jpg" alt="Ginseng Leaves Image 2" class="preview-image" onclick="showInLargeView('images/ginseng2.jpg', 'image', this)">
+                </div>
+                <div class="preview-item">
+                  <video class="preview-video" onclick="showInLargeView('medias/ginseng.mp4', 'video', this)">
+                    <source src="medias/ginseng.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="preview-item">
+                  <img src="images/ginseng3D.jpg" alt="Ginseng Leaves 3D Model" class="preview-image" onclick="showInLargeView('3D Models/ginseng.glb', '3dmodel', this)">
+                </div>
+              </div>
+      
+              <div class="media-large-view-column">
+                <div class="large-view-item">
+                  <model-viewer
+                    id="large-view"
+                    src="3D Models/ginseng.glb"
+                    alt="3D model of Ginseng Leaves"
+                    auto-rotate
+                    camera-controls
+                    class="large-view-3dmodel"
+                  ></model-viewer>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-details">
+            <div class="audio-container">
+              <audio id="audio-player" src="medias/ginseng.mp3" controls></audio>
+            </div>
+      
+            <button id="comment-button">Leave a Comment</button>
+            <div class="item-name">Ginseng Leaves</div>
+            <div class="item-botanical-name">
+              Botanical Name: Panax ginseng
+            </div>
+      
+            <div class="item-common-names">
+              <strong>Common Names:</strong> Ginseng, Korean Ginseng, Asian Ginseng, Panax Ginseng
+            </div>
+      
+            <div class="item-family"><strong>Family:</strong> Araliaceae</div>
+      
+            <div class="item-description">
+              <strong>Description:</strong> Ginseng leaves come from the Panax ginseng plant, known for its medicinal properties. The leaves are typically green and palmate, with five to seven leaflets. Ginseng is famous for its ability to increase energy and support overall health.
+            </div>
+      
+            <div class="item-medicinal-uses">
+              <strong>Medicinal Uses:</strong>
+              <ul>
+                <li><strong>Energy Boost:</strong> Ginseng is widely known for its ability to reduce fatigue and increase energy levels.</li>
+                <li><strong>Stress Relief:</strong> It has adaptogenic properties that help the body manage stress more effectively.</li>
+                <li><strong>Enhances Cognitive Function:</strong> Ginseng is believed to improve memory, focus, and overall brain function.</li>
+                <li><strong>Immune System Support:</strong> It can boost the immune system and help the body fight infections.</li>
+                <li><strong>Blood Circulation:</strong> Ginseng is used to improve circulation and lower blood sugar levels.</li>
+              </ul>
+            </div>
+      
+            <div class="item-culinary-uses">
+              <strong>Culinary Uses:</strong>
+              <ul>
+                <li><strong>Herbal Tea:</strong> Ginseng leaves are often used to make herbal teas that promote energy and vitality.</li>
+                <li><strong>Powdered Form:</strong> Ginseng leaves can be dried and powdered, adding to smoothies or soups for their health benefits.</li>
+                <li><strong>Ginseng Extract:</strong> The leaves are also used to make concentrated extracts, which are added to dietary supplements.</li>
+              </ul>
+            </div>
+      
+            <div class="item-habitat">
+              <strong>Places Where Found:</strong>
+              <p>Ginseng is native to East Asia, including China, Korea, and Russia. It is commonly cultivated in the mountainous regions of these countries, where the climate is cool and shaded.</p>
+            </div>
+      
+            <div class="item-history">
+              <strong>Cultural and Historical Significance:</strong>
+              <p>Ginseng has a long history in traditional Asian medicine. It has been revered as a tonic for vitality and longevity for thousands of years. In traditional Chinese medicine, it is considered a "yin" herb that balances energy and supports overall wellness.</p>
+            </div>
+      
+            <div class="item-chemical-composition">
+              <strong>Chemical Composition:</strong>
+              <ul>
+                <li><strong>Ginsenosides:</strong> These active compounds are believed to be responsible for many of ginseng's medicinal effects, including its energy-boosting and stress-reducing properties.</li>
+                <li><strong>Polysaccharides:</strong> These compounds help to boost immunity and promote health.</li>
+                <li><strong>Flavonoids:</strong> Ginseng leaves contain flavonoids, which provide antioxidant and anti-inflammatory benefits.</li>
+              </ul>
+            </div>
+      
+            <div class="item-usage">
+              <strong>How to Use:</strong>
+              <ul>
+                <li><strong>Herbal Tea:</strong> Boil the leaves in water for a calming and energy-boosting tea.</li>
+                <li><strong>Powder:</strong> Grind dried ginseng leaves into powder and add it to smoothies or teas.</li>
+                <li><strong>Capsules:</strong> Ginseng is available in capsule form as a dietary supplement to enhance energy and cognitive function.</li>
+              </ul>
+            </div>
+      
+            <div class="item-safety">
+              <strong>Safety and Side Effects:</strong>
+              <p>Ginseng is generally considered safe for short-term use. However, it may cause side effects such as headaches, dizziness, and digestive upset in some individuals. People with high blood pressure or heart conditions should consult a healthcare provider before using ginseng, especially in large quantities. Pregnant and breastfeeding women should also avoid it unless recommended by a doctor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
+    <script>
+      function showInLargeView(source, type, element) {
+        var largeViewContainer = document.querySelector(".large-view-item");
+
+        // Clear the current content
+        largeViewContainer.innerHTML = "";
+
+        // Remove the 'selected' class from all preview items
+        var previewItems = document.querySelectorAll(".preview-item");
+        previewItems.forEach(function (item) {
+          item.classList.remove("selected");
+        });
+
+        // Add the 'selected' class to the clicked item
+        element.classList.add("selected");
+
+        if (type === "image") {
+          var imgElement = document.createElement("img");
+          imgElement.src = source;
+          imgElement.alt = "Large View";
+          imgElement.classList.add("large-view-image");
+          largeViewContainer.appendChild(imgElement);
+        } else if (type === "video") {
+          var videoElement = document.createElement("video");
+          videoElement.src = source;
+          videoElement.classList.add("large-view-video");
+          videoElement.setAttribute("controls", "controls");
+          largeViewContainer.appendChild(videoElement);
+          videoElement.play(); // Automatically start playing the video
+        } else if (type === "3dmodel") {
+          var modelViewer = document.createElement("model-viewer");
+          modelViewer.src = source;
+          modelViewer.alt = "3D model of Ginger";
+          modelViewer.autoRotate = true;
+          modelViewer.cameraControls = true;
+          modelViewer.classList.add("large-view-3dmodel");
+          largeViewContainer.appendChild(modelViewer);
+        }
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
+</html>

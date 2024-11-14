@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Herbal Website</title>
+    <link rel="stylesheet" href="css/item.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="logo/logo.png" width="120px" /></a>
+        </div>
+        <div class="search">
+          <div class="searchbar">
+            <input
+              id="search-input"
+              placeholder="Search by plant or medicine name..."
+            />
+            <button id="imagesearchbyn">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <button id="searchbtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      </div>
+      <div class="nav2">
+        <a href="ayurveda.html" class="nav-link">Ayurveda</a>
+        <a href="#" class="nav-link" data-target="wrapper2">Naturopathy</a>
+        <a href="#" class="nav-link" data-target="footer">Unani</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Siddha</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Homeopathy</a>
+      </div>
+    </div>
+    <div class="main">
+        <div class="item">
+          <div class="item-graphics">
+            <div class="item-media">
+              <div class="media-preview-column">
+                <div class="preview-item">
+                  <img src="images/chili1.jpg" alt="Chili Leaves Image 1" class="preview-image" onclick="showInLargeView('images/chili1.jpg', 'image', this)">
+                </div>
+                <div class="preview-item">
+                  <img src="images/chili2.jpg" alt="Chili Leaves Image 2" class="preview-image" onclick="showInLargeView('images/chili2.jpg', 'image', this)">
+                </div>
+                <div class="preview-item">
+                  <video class="preview-video" onclick="showInLargeView('medias/chili.mp4', 'video', this)">
+                    <source src="medias/chili.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="preview-item">
+                  <img src="images/chili3D.jpg" alt="Chili 3D Model" class="preview-image" onclick="showInLargeView('3D Models/chili.glb', '3dmodel', this)">
+                </div>
+              </div>
+      
+              <div class="media-large-view-column">
+                <div class="large-view-item">
+                  <model-viewer
+                    id="large-view"
+                    src="3D Models/chili.glb"
+                    alt="3D model of Chili Leaves"
+                    auto-rotate
+                    camera-controls
+                    class="large-view-3dmodel"
+                  ></model-viewer>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-details">
+            <div class="audio-container">
+              <audio id="audio-player" src="medias/chili.mp3" controls></audio>
+            </div>
+      
+            <button id="comment-button">Leave a Comment</button>
+            <div class="item-name">Chili Leaves</div>
+            <div class="item-botanical-name">
+              Botanical Name: Capsicum annuum
+            </div>
+      
+            <div class="item-common-names">
+              <strong>Common Names:</strong> Chili, Hot Pepper, Red Pepper, Bell Pepper
+            </div>
+      
+            <div class="item-family"><strong>Family:</strong> Solanaceae</div>
+      
+            <div class="item-description">
+              <strong>Description:</strong> Chili leaves come from the plant **Capsicum annuum**, a species widely known for its hot and pungent fruits. The leaves are green, broad, and typically have a smooth texture. Though less commonly used, they are valued in traditional medicine and cooking in various cultures.
+            </div>
+      
+            <div class="item-medicinal-uses">
+              <strong>Medicinal Uses:</strong>
+              <ul>
+                <li><strong>Pain Relief:</strong> Chili leaves contain compounds like capsaicin, which can help alleviate pain and inflammation when used topically.</li>
+                <li><strong>Anti-inflammatory:</strong> Known for reducing inflammation, especially for conditions such as arthritis or muscle pain.</li>
+                <li><strong>Digestive Aid:</strong> Used to promote digestion and soothe stomach discomfort.</li>
+                <li><strong>Respiratory Health:</strong> Used in traditional remedies to relieve symptoms of cough and cold by clearing nasal congestion.</li>
+              </ul>
+            </div>
+      
+            <div class="item-culinary-uses">
+              <strong>Culinary Uses:</strong>
+              <ul>
+                <li><strong>Infused Oil:</strong> Chili leaf oil can be used as a base for various culinary dishes.</li>
+                <li><strong>Herbal Teas:</strong> Leaves can be steeped in water to make a tea, often used to soothe digestive issues.</li>
+                <li><strong>Seasoning:</strong> In some cultures, chili leaves are used in soups, stews, and curries to add flavor and mild heat.</li>
+              </ul>
+            </div>
+      
+            <div class="item-habitat">
+              <strong>Places Where Found:</strong>
+              <p>Chili plants are native to Central and South America but are now grown worldwide in tropical, subtropical, and temperate regions. Chili leaves are commonly found in gardens and farms where chili peppers are cultivated.</p>
+            </div>
+      
+            <div class="item-history">
+              <strong>Cultural and Historical Significance:</strong>
+              <p>Chili peppers and their leaves have been part of culinary traditions for centuries, particularly in Central and South America. In many cultures, chili is considered an essential ingredient for spicing up food and is also believed to have medicinal properties.</p>
+            </div>
+      
+            <div class="item-chemical-composition">
+              <strong>Chemical Composition:</strong>
+              <ul>
+                <li><strong>Capsaicin:</strong> Known for its heat and pain-relieving properties, capsaicin is present in varying concentrations in the leaves and fruits.</li>
+                <li><strong>Flavonoids:</strong> Contribute to the anti-inflammatory and antioxidant properties of the leaves.</li>
+                <li><strong>Vitamins A and C:</strong> Essential for immune system support and skin health.</li>
+              </ul>
+            </div>
+      
+            <div class="item-usage">
+              <strong>How to Use:</strong>
+              <ul>
+                <li><strong>Leaf Powder:</strong> Dried leaves can be ground into a powder and used in homemade remedies or culinary dishes.</li>
+                <li><strong>Fresh Leaves:</strong> Fresh chili leaves can be used in soups, stews, or as an herbal infusion.</li>
+                <li><strong>Topical Application:</strong> For pain relief, chili leaf paste can be applied to sore muscles or inflamed joints.</li>
+              </ul>
+            </div>
+      
+            <div class="item-safety">
+              <strong>Safety and Side Effects:</strong>
+              <p>Chili leaves are generally safe for consumption in moderate amounts. However, excessive use may cause irritation, especially when applied topically due to capsaicin. Individuals with sensitive skin or allergies should exercise caution. Pregnant women and those with underlying health conditions should consult a healthcare provider before using chili leaves medicinally.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+    <script>
+      function showInLargeView(source, type, element) {
+        var largeViewContainer = document.querySelector(".large-view-item");
+
+        // Clear the current content
+        largeViewContainer.innerHTML = "";
+
+        // Remove the 'selected' class from all preview items
+        var previewItems = document.querySelectorAll(".preview-item");
+        previewItems.forEach(function (item) {
+          item.classList.remove("selected");
+        });
+
+        // Add the 'selected' class to the clicked item
+        element.classList.add("selected");
+
+        if (type === "image") {
+          var imgElement = document.createElement("img");
+          imgElement.src = source;
+          imgElement.alt = "Large View";
+          imgElement.classList.add("large-view-image");
+          largeViewContainer.appendChild(imgElement);
+        } else if (type === "video") {
+          var videoElement = document.createElement("video");
+          videoElement.src = source;
+          videoElement.classList.add("large-view-video");
+          videoElement.setAttribute("controls", "controls");
+          largeViewContainer.appendChild(videoElement);
+          videoElement.play(); // Automatically start playing the video
+        } else if (type === "3dmodel") {
+          var modelViewer = document.createElement("model-viewer");
+          modelViewer.src = source;
+          modelViewer.alt = "3D model of Ginger";
+          modelViewer.autoRotate = true;
+          modelViewer.cameraControls = true;
+          modelViewer.classList.add("large-view-3dmodel");
+          largeViewContainer.appendChild(modelViewer);
+        }
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
+</html>

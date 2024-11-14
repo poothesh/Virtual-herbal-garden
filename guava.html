@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Herbal Website</title>
+    <link rel="stylesheet" href="css/item.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="logo/logo.png" width="120px" /></a>
+        </div>
+        <div class="search">
+          <div class="searchbar">
+            <input
+              id="search-input"
+              placeholder="Search by plant or medicine name..."
+            />
+            <button id="imagesearchbyn">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <button id="searchbtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      </div>
+      <div class="nav2">
+        <a href="ayurveda.html" class="nav-link">Ayurveda</a>
+        <a href="#" class="nav-link" data-target="wrapper2">Naturopathy</a>
+        <a href="#" class="nav-link" data-target="footer">Unani</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Siddha</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Homeopathy</a>
+      </div>
+    </div>
+    <div class="main">
+        <div class="item">
+          <div class="item-graphics">
+            <div class="item-media">
+              <div class="media-preview-column">
+                <div class="preview-item">
+                  <img src="images/guava1.jpg" alt="Guava Leaves Image 1" class="preview-image" onclick="showInLargeView('images/guava1.jpg', 'image', this)">
+                </div>
+                <div class="preview-item">
+                  <img src="images/guava2.jpg" alt="Guava Leaves Image 2" class="preview-image" onclick="showInLargeView('images/guava2.jpg', 'image', this)">
+                </div>
+                <div class="preview-item">
+                  <video class="preview-video" onclick="showInLargeView('medias/guava.mp4', 'video', this)">
+                    <source src="medias/guava.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="preview-item">
+                  <img src="images/guava3D.jpg" alt="Guava Leaves 3D Model" class="preview-image" onclick="showInLargeView('3D Models/guava.glb', '3dmodel', this)">
+                </div>
+              </div>
+      
+              <div class="media-large-view-column">
+                <div class="large-view-item">
+                  <model-viewer
+                    id="large-view"
+                    src="3D Models/guava.glb"
+                    alt="3D model of Guava Leaves"
+                    auto-rotate
+                    camera-controls
+                    class="large-view-3dmodel"
+                  ></model-viewer>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-details">
+            <div class="audio-container">
+              <audio id="audio-player" src="medias/guava.mp3" controls></audio>
+            </div>
+      
+            <button id="comment-button">Leave a Comment</button>
+            <div class="item-name">Guava Leaves</div>
+            <div class="item-botanical-name">
+              Botanical Name: Psidium guajava
+            </div>
+      
+            <div class="item-common-names">
+              <strong>Common Names:</strong> Guava, Amrood (Hindi), Goiaba (Spanish)
+            </div>
+      
+            <div class="item-family"><strong>Family:</strong> Myrtaceae</div>
+      
+            <div class="item-description">
+              <strong>Description:</strong> Guava leaves are the leaves of the guava tree, known for their medicinal properties. They are used in traditional medicine and are often made into teas or extracts for their numerous health benefits.
+            </div>
+      
+            <div class="item-medicinal-uses">
+              <strong>Medicinal Uses:</strong>
+              <ul>
+                <li><strong>Antioxidant Properties:</strong> Guava leaves are rich in antioxidants like polyphenols, which help neutralize free radicals in the body.</li>
+                <li><strong>Improves Digestive Health:</strong> Guava leaves are commonly used to treat diarrhea, dysentery, and indigestion.</li>
+                <li><strong>Blood Sugar Regulation:</strong> Guava leaves may help regulate blood sugar levels, especially for people with type 2 diabetes.</li>
+                <li><strong>Anti-inflammatory Effects:</strong> The leaves can reduce inflammation in the body, making them useful for managing conditions like arthritis.</li>
+                <li><strong>Supports Oral Health:</strong> Guava leaves have antimicrobial properties that can help treat gum diseases, mouth ulcers, and bad breath.</li>
+              </ul>
+            </div>
+      
+            <div class="item-culinary-uses">
+              <strong>Culinary Uses:</strong>
+              <ul>
+                <li><strong>Guava Leaf Tea:</strong> Steeped in hot water to create a refreshing tea known for its health benefits.</li>
+                <li><strong>Herbal Infusions:</strong> Guava leaves can be used in various herbal infusions, often combined with other medicinal herbs.</li>
+                <li><strong>Guava Leaf Extract:</strong> Used in some culinary dishes, especially in certain tropical regions, for its medicinal properties.</li>
+              </ul>
+            </div>
+      
+            <div class="item-habitat">
+              <strong>Places Where Found:</strong>
+              <p>Guava trees are native to the tropical and subtropical regions of the Americas, but they are now grown in many parts of the world, including Asia, Africa, and the Caribbean.</p>
+            </div>
+      
+            <div class="item-history">
+              <strong>Cultural and Historical Significance:</strong>
+              <p>Guava has been cultivated for thousands of years in the tropics. In many cultures, guava and its leaves have been used in traditional medicine and as a natural remedy for various ailments.</p>
+            </div>
+      
+            <div class="item-chemical-composition">
+              <strong>Chemical Composition:</strong>
+              <ul>
+                <li><strong>Polyphenols:</strong> Known for their powerful antioxidant effects, they help prevent oxidative damage and promote overall health.</li>
+                <li><strong>Flavonoids:</strong> Help fight inflammation and boost immunity.</li>
+                <li><strong>Carotenoids:</strong> Provide antioxidant benefits and support eye health.</li>
+              </ul>
+            </div>
+      
+            <div class="item-usage">
+              <strong>How to Use:</strong>
+              <ul>
+                <li><strong>Guava Leaf Tea:</strong> Brew the leaves in hot water to make a soothing herbal tea.</li>
+                <li><strong>Guava Leaf Extract:</strong> Available as supplements or made by boiling the leaves in water to extract the beneficial compounds.</li>
+                <li><strong>Chewing Leaves:</strong> In some regions, chewing fresh guava leaves is used to treat mouth ulcers and oral issues.</li>
+              </ul>
+            </div>
+      
+            <div class="item-safety">
+              <strong>Safety and Side Effects:</strong>
+              <p>Guava leaves are generally safe for most people when consumed in moderate amounts. However, excessive consumption may cause mild stomach upset. Pregnant women and people with specific health conditions should consult a healthcare provider before using guava leaves for medicinal purposes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    <script>
+      function showInLargeView(source, type, element) {
+        var largeViewContainer = document.querySelector(".large-view-item");
+
+        // Clear the current content
+        largeViewContainer.innerHTML = "";
+
+        // Remove the 'selected' class from all preview items
+        var previewItems = document.querySelectorAll(".preview-item");
+        previewItems.forEach(function (item) {
+          item.classList.remove("selected");
+        });
+
+        // Add the 'selected' class to the clicked item
+        element.classList.add("selected");
+
+        if (type === "image") {
+          var imgElement = document.createElement("img");
+          imgElement.src = source;
+          imgElement.alt = "Large View";
+          imgElement.classList.add("large-view-image");
+          largeViewContainer.appendChild(imgElement);
+        } else if (type === "video") {
+          var videoElement = document.createElement("video");
+          videoElement.src = source;
+          videoElement.classList.add("large-view-video");
+          videoElement.setAttribute("controls", "controls");
+          largeViewContainer.appendChild(videoElement);
+          videoElement.play(); // Automatically start playing the video
+        } else if (type === "3dmodel") {
+          var modelViewer = document.createElement("model-viewer");
+          modelViewer.src = source;
+          modelViewer.alt = "3D model of Ginger";
+          modelViewer.autoRotate = true;
+          modelViewer.cameraControls = true;
+          modelViewer.classList.add("large-view-3dmodel");
+          largeViewContainer.appendChild(modelViewer);
+        }
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
+</html>
